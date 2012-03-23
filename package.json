@@ -1,6 +1,6 @@
 {
     "name"            : "heap"
-  , "version"         : "0.1.0"
+  , "version"         : "0.1.1"
   , "description"     : "binary heap (priority queue) algorithms (ported from Python's heapq module)"
   , "homepage"        : "https://github.com/qiao/heap.js"
   , "keywords"        : ["algorithm", "data structure", "heap"]
@@ -17,7 +17,7 @@
     , "url"           : "git://github.com/qiao/heap.js.git"
   }
   , "licenses"        : [{
-      "type"          :  "MIT"
-    , "url"           : "http://opensource.org/licenses/mit-license.php"
+      "type"          :  "PSF"
+    , "url"           : "http://docs.python.org/license.html"
   }]
 }
