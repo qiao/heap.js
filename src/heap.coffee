@@ -161,12 +161,6 @@ class Heap
   heapify: ->
     heapify(@data, @cmp)
 
-  nlargest: (n) ->
-    nlargest(n, @data, @cmp)
-
-  nsmallest: (n) ->
-    nsmallest(n, @data, @cmp)
-
   empty: ->
     @data.length is 0
 
