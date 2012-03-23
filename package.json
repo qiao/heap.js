@@ -1,7 +1,7 @@
 {
     "name"            : "heap"
   , "version"         : "0.1.0"
-  , "description"     : "binary heap (priority queue) algorithms (ported from Python's heapq library)"
+  , "description"     : "binary heap (priority queue) algorithms (ported from Python's heapq module)"
   , "homepage"        : "https://github.com/qiao/heap.js"
   , "keywords"        : ["algorithm", "data structure", "heap"]
   , "author"          : "Xueqiao Xu <xueqiaoxu@gmail.com>"
