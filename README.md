@@ -31,7 +31,7 @@ Examples
 -------
 
 
-* push and pop
+push and pop
 
 ```js
 var heap = new Heap();
@@ -41,7 +41,7 @@ heap.push(2);
 heap.pop(); // 1
 ```
 
-* custom comparison function
+custom comparison function
 
 ```js
 var heap = new Heap(function(a, b) {
@@ -53,7 +53,7 @@ heap.push({foo: 2});
 heap.pop(); // {foo: 1}
 ```
 
-* find 3 largest/smallest items in an array
+find 3 largest/smallest items in an array
 
 ```js
 var array = [1, 3, 4, 2, 5];
@@ -142,15 +142,15 @@ Return the array representation of the heap.
 
 NOTE: All the static methods are designed to be applied on arrays.
 
-**push(array, item)** 
+**push(array, item, [cmp])** 
 
 Push item onto array, maintaining the heap invariant.
 
-**pop(array)**
+**pop(array, [cmp])**
 
 Pop the smallest item off the array, maintaining the heap invariant.
 
-**replace(array, item)**
+**replace(array, item, [cmp])**
 
 Pop and return the current smallest value, and add the new item.
 
@@ -158,19 +158,19 @@ This is more efficient than heappop() followed by heappush(), and can be
 more appropriate when using a fixed size heap. Note that the value
 returned may be larger than item! 
 
-**pushpop(array, item)**
+**pushpop(array, item, [cmp])**
 
 Fast version of a heappush followed by a heappop.
 
-**heapify(array)**
+**heapify(array, [cmp])**
 
 Build the heap.
 
-**nlargest(n, array)**
+**nlargest(n, array, [cmp])**
 
 Find the n largest elements in a dataset.
 
-**nsmallest(n, array)**
+**nsmallest(n, array, [cmp])**
 
 Find the n smallest elements in a dataset.
 
