@@ -31,7 +31,7 @@ Examples
 -------
 
 
-1. push and pop
+* push and pop
 
 ```js
 var heap = new Heap();
@@ -41,7 +41,7 @@ heap.push(2);
 heap.pop(); // 1
 ```
 
-2. heap with custom comparison function
+* custom comparison function
 
 ```js
 var heap = new Heap(function(a, b) {
@@ -53,7 +53,7 @@ heap.push({foo: 2});
 heap.pop(); // {foo: 1}
 ```
 
-3. find 3 largest/smallest items in an array
+* find 3 largest/smallest items in an array
 
 ```js
 var array = [1, 3, 4, 2, 5];
