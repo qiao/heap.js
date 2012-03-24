@@ -36,6 +36,9 @@ describe 'Heap.nsmallest', ->
   it 'should return exactly n elements when size() >= n', ->
     Heap.nsmallest(3, [1..10]).should.eql([1..3])
 
+    array = [1,3,2,1,3,4,4,2,3,4,5,1,2,3,4,5,2,1,3,4,5,6,7,2]
+    Heap.nsmallest(2, array).should.eql([1, 1])
+
   it 'should return size() elements when size() <= n', ->
     Heap.nsmallest(10, [3..1]).should.eql([1..3])
 

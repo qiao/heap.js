@@ -1,6 +1,14 @@
 {floor, min} = Math
 
 ### 
+Default comparison function to be used 
+###
+defaultCmp = (x, y) ->
+  return -1 if x < y
+  return 1 if x > y
+  0
+
+### 
 Insert item x in list a, and keep it sorted assuming a is sorted.
 
 If x is already in a, insert it to the right of the rightmost x.
@@ -8,24 +16,16 @@ If x is already in a, insert it to the right of the rightmost x.
 Optional args lo (default 0) and hi (default a.length) bound the slice
 of a to be searched.
 ###
-insort = (a, x, lo=0, hi) ->
+insort = (a, x, lo=0, hi, cmp=defaultCmp) ->
   throw new Error('lo must be non-negative') if lo < 0
   hi ?= a.length
-  while lo < hi
+  while cmp(lo, hi) < 0
     mid = floor((lo + hi) / 2)
-    if x < a[mid]
+    if cmp(x, a[mid]) < 0
       hi = mid
     else
       lo = mid + 1
   a[lo...lo] = x
-
-### 
-Default comparison function to be used 
-###
-defaultCmp = (x, y) ->
-  return -1 if x < y
-  return 1 if x > y
-  0
 
 ###
 Push item onto heap, maintaining the heap invariant.
@@ -94,12 +94,12 @@ Find the n smallest elements in a dataset.
 ###
 nsmallest = (n, array, cmp=defaultCmp) ->
   if n * 10 <= array.length
-    result = array[0..n].sort()
+    result = array[0...n].sort(cmp)
     return result unless result.length
     los = result[result.length - 1]
-    for elem in array
+    for elem in array[n..]
       if cmp(elem, los) < 0
-        insort(result, elem)
+        insort(result, elem, 0, null, cmp)
         result.pop()
         los = result[result.length - 1]
     return result
