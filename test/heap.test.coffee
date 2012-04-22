@@ -50,6 +50,13 @@ describe 'Heap#peek', ->
     heap.pop()
     heap.peek().should.eql(2)
 
+describe 'Heap#clone', ->
+  it 'should return a cloned heap', ->
+    a = new Heap
+    a.push(v) for v in [1..5]
+    b = a.clone()
+    a.toArray().should.eql(b.toArray())
+
 describe 'Heap.nsmallest', ->
   it 'should return exactly n elements when size() >= n', ->
     Heap.nsmallest(3, [1..10]).should.eql([1..3])
