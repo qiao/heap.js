@@ -39,7 +39,16 @@ describe 'Heap#contains', ->
     heap.contains(v).should.be.true for v in [1..5]
     heap.contains(0).should.be.false
     heap.contains(6).should.be.false
-    
+
+describe 'Heap#peek', ->
+  it 'should return the top value', ->
+    heap = new Heap
+    heap.push(1)
+    heap.peek().should.eql(1)
+    heap.push(2)
+    heap.peek().should.eql(1)
+    heap.pop()
+    heap.peek().should.eql(2)
 
 describe 'Heap.nsmallest', ->
   it 'should return exactly n elements when size() >= n', ->
