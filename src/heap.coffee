@@ -183,6 +183,14 @@ class Heap
   toArray: ->
     @nodes.slice(0)
 
+  # aliases
+  insert: @::push
+  remove: @::pop
+  top:    @::peek
+  front:  @::peek
+  has:    @::contains
+  copy:   @::clone
+
 
 # exports to global
 @Heap = Heap
