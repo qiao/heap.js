@@ -82,7 +82,7 @@ heapify = (array, cmp=defaultCmp) ->
 ###
 Find the n largest elements in a dataset.
 ###
-nlargest = (n, array, cmp=defaultCmp) ->
+nlargest = (array, n, cmp=defaultCmp) ->
   result = array[0...n]
   return result unless result.length
   heapify(result, cmp)
@@ -92,7 +92,7 @@ nlargest = (n, array, cmp=defaultCmp) ->
 ###
 Find the n smallest elements in a dataset.
 ###
-nsmallest = (n, array, cmp=defaultCmp) ->
+nsmallest = (array, n, cmp=defaultCmp) ->
   if n * 10 <= array.length
     result = array[0...n].sort(cmp)
     return result unless result.length

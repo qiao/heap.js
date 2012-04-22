@@ -57,8 +57,8 @@ find 3 largest/smallest items in an array
 
 ```js
 var array = [1, 3, 4, 2, 5];
-Heap.nlargest(3, array);  // [5, 4, 3]
-Heap.nsmallest(3, array); // [1, 2, 3]
+Heap.nlargest(array, 3);  // [5, 4, 3]
+Heap.nsmallest(array, 3); // [1, 2, 3]
 ```
 
 Document
@@ -173,11 +173,11 @@ Fast version of a heappush followed by a heappop.
 
 Build the heap.
 
-**nlargest(n, array, [cmp])**
+**nlargest(array, n, [cmp])**
 
 Find the n largest elements in a dataset.
 
-**nsmallest(n, array, [cmp])**
+**nsmallest(array, n, [cmp])**
 
 Find the n smallest elements in a dataset.
 
