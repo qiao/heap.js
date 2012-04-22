@@ -32,6 +32,15 @@ describe 'Heap#pushpop', ->
     heap.pushpop(6).should.eql(1)
     heap.toArray().sort().should.eql([2..6])
 
+describe 'Heap#contains', ->
+  it 'should return whether it contains the value', ->
+    heap = new Heap
+    heap.push(v) for v in [1..5]
+    heap.contains(v).should.be.true for v in [1..5]
+    heap.contains(0).should.be.false
+    heap.contains(6).should.be.false
+    
+
 describe 'Heap.nsmallest', ->
   it 'should return exactly n elements when size() >= n', ->
     Heap.nsmallest(3, [1..10]).should.eql([1..3])
@@ -48,3 +57,4 @@ describe 'Heap.nlargest', ->
 
   it 'should return size() elements when size() <= n', ->
     Heap.nlargest(10, [3..1]).should.eql([3..1])
+

@@ -144,31 +144,37 @@ class Heap
   @nsmallest: nsmallest
 
   constructor: (@cmp=defaultCmp) ->
-    @data = []
+    @nodes = []
 
   push: (x) ->
-    heappush(@data, x, @cmp)
+    heappush(@nodes, x, @cmp)
 
   pop: ->
-    heappop(@data, @cmp)
+    heappop(@nodes, @cmp)
+
+  peek: ->
+    @nodes[0]
+
+  contains: (x) ->
+    @nodes.indexOf(x) isnt -1
 
   replace: (x) ->
-    heapreplace(@data, x, @cmp)
+    heapreplace(@nodes, x, @cmp)
 
   pushpop: (x) ->
-    heappushpop(@data, x, @cmp)
+    heappushpop(@nodes, x, @cmp)
 
   heapify: ->
-    heapify(@data, @cmp)
+    heapify(@nodes, @cmp)
 
   empty: ->
-    @data.length is 0
+    @nodes.length is 0
 
   size: ->
-    @data.length
+    @nodes.length
 
   toArray: ->
-    @data.slice()
+    @nodes.slice()
 
 # exports to global
-(module?.exports or window).Heap = Heap
+@Heap = Heap
