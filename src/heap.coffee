@@ -179,6 +179,7 @@ class Heap
   clone: ->
     heap = new Heap()
     heap.nodes = @nodes.slice(0)
+    heap
 
   toArray: ->
     @nodes.slice(0)
