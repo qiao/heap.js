@@ -100,13 +100,17 @@ function cmp(a, b) {
 
 ### Instance Methods ###
 
-**push(item)** 
+**push(item)** (alias: **insert**) 
 
 Push item onto heap.
 
-**pop()**
+**pop()** (alias: **remove**)
 
-Pop the smallest item off the heap.
+Pop the smallest item off the heap and return it.
+
+**peep()** (alias: **top** / **front**)
+
+Return the smallest item of the heap.
 
 **replace(item)**
 
@@ -129,14 +133,17 @@ internal data is being modified.
 
 Determine whether the heap is empty.
 
-
 **size()**
 
 Get the number of elements stored in the heap.
 
 **toArray()**
 
-Return the array representation of the heap.
+Return the array representation of the heap. (note: the array is a shallow copy of the heap's internal nodes)
+
+**clone()** (alias: **copy**)
+
+Return a clone of the heap. (note: the internal data is a shallow copy of the original one)
 
 ### Static Methods ###
 
