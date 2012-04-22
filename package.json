@@ -1,6 +1,6 @@
 {
     "name"            : "heap"
-  , "version"         : "0.1.2"
+  , "version"         : "0.2.0"
   , "description"     : "binary heap (priority queue) algorithms (ported from Python's heapq module)"
   , "homepage"        : "https://github.com/qiao/heap.js"
   , "keywords"        : ["algorithm", "data structure", "heap"]
@@ -8,7 +8,7 @@
   , "main"            : "./index.js"
   , "dependencies"    : {}
   , "devDependencies" : {
-      "coffee-script"   : ">= 1.2.0"
+      "coffee-script"   : ">= 1.3.0"
     , "mocha"           : ">= 0.14.0"
     , "should"          : ">= 0.6.0"
   }
