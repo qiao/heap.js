@@ -167,14 +167,22 @@ class Heap
   heapify: ->
     heapify(@nodes, @cmp)
 
+  clear: ->
+    @nodes = []
+
   empty: ->
     @nodes.length is 0
 
   size: ->
     @nodes.length
 
+  clone: ->
+    heap = new Heap()
+    heap.nodes = @nodes.slice(0)
+
   toArray: ->
-    @nodes.slice()
+    @nodes.slice(0)
+
 
 # exports to global
 @Heap = Heap
