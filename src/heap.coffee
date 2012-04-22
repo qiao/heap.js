@@ -194,4 +194,7 @@ class Heap
 
 
 # exports to global
-@Heap = Heap
+if module?.exports
+  module.exports = Heap
+else
+  window.Heap = Heap

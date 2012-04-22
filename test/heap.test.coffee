@@ -1,4 +1,4 @@
-{Heap} = require '..'
+Heap = require '..'
 {random} = Math
 
 describe 'Heap#push, Heap#pop', ->

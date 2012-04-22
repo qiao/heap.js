@@ -24,7 +24,7 @@ npm install heap
 then require it:
 
 ```
-var Heap = require('heap').Heap;
+var Heap = require('heap');
 ```
 
 Examples
