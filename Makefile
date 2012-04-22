@@ -9,6 +9,9 @@ test:
 		node_modules/.bin/mocha \
 			--require should \
 			--timeout $(TEST_TIMEOUT) \
-			--reporter $(TEST_REPORTER) 
+			--reporter $(TEST_REPORTER) \
+			--compilers coffee:coffee-script \
+			test/*.coffee
+			
 
 .PHONY: test

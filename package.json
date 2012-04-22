@@ -8,9 +8,9 @@
   , "main"            : "./index.js"
   , "dependencies"    : {}
   , "devDependencies" : {
-      "coffee-script"   : ">= 1.3.0"
-    , "mocha"           : ">= 0.14.0"
-    , "should"          : ">= 0.6.0"
+      "coffee-script"   : "1.3.x"
+    , "mocha"           : "1.0.x"
+    , "should"          : "0.6.x"
   }
   , "repository"      : {
       "type"          : "git"
