@@ -74,3 +74,15 @@ describe 'Heap.nlargest', ->
   it 'should return size() elements when size() <= n', ->
     Heap.nlargest([3..1], 10).should.eql([3..1])
 
+describe 'Heap#updateItem', ->
+  it 'should return correct order', ->
+    a = x: 1
+    b = x: 2
+    c = x: 3
+    h = new Heap (m, n) -> m.x - n.x
+    h.push(a)
+    h.push(b)
+    h.push(c)
+    c.x = 0
+    h.updateItem(c)
+    h.pop().should.eql(c)

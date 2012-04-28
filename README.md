@@ -129,6 +129,11 @@ Fast version of a push followed by a pop.
 Rebuild the heap. This method may come handy when the priority of the 
 internal data is being modified.
 
+**updateItem(item)**
+
+Update the position of the given item in the heap.
+This function should be called every time the item is being modified.
+
 **empty()**
 
 Determine whether the heap is empty.
@@ -172,6 +177,11 @@ Fast version of a heappush followed by a heappop.
 **heapify(array, [cmp])**
 
 Build the heap.
+
+**updateItem(array, item, [cmp])**
+
+Update the position of the given item in the heap.
+This function should be called every time the item is being modified.
 
 **nlargest(array, n, [cmp])**
 

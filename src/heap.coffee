@@ -80,6 +80,16 @@ heapify = (array, cmp=defaultCmp) ->
     _siftup(array, i, cmp)
 
 ###
+Update the position of the given item in the heap.
+This function should be called every time the item is being modified.
+###
+updateItem = (array, item, cmp=defaultCmp) ->
+  pos = array.indexOf(item)
+  return if pos is -1
+  _siftdown(array, 0, pos, cmp)
+  _siftup(array, pos, cmp)
+
+###
 Find the n largest elements in a dataset.
 ###
 nlargest = (array, n, cmp=defaultCmp) ->
@@ -166,6 +176,9 @@ class Heap
 
   heapify: ->
     heapify(@nodes, @cmp)
+
+  updateItem: (x) ->
+    updateItem(@nodes, x, @cmp)
 
   clear: ->
     @nodes = []
