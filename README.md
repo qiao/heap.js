@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/qiao/heap.js.png)](http://travis-ci.org/qiao/heap.js)
 Heap.js
 =======
 
