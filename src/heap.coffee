@@ -19,7 +19,7 @@ of a to be searched.
 insort = (a, x, lo=0, hi, cmp=defaultCmp) ->
   throw new Error('lo must be non-negative') if lo < 0
   hi ?= a.length
-  while cmp(lo, hi) < 0
+  while lo < hi
     mid = floor((lo + hi) / 2)
     if cmp(x, a[mid]) < 0
       hi = mid
