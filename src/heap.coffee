@@ -199,7 +199,6 @@ class Heap
 
   # aliases
   insert: @::push
-  remove: @::pop
   top:    @::peek
   front:  @::peek
   has:    @::contains

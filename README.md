@@ -104,7 +104,7 @@ function cmp(a, b) {
 
 Push item onto heap.
 
-**pop()** (alias: **remove**)
+**pop()**
 
 Pop the smallest item off the heap and return it.
 
