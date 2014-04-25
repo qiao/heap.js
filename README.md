@@ -1,6 +1,8 @@
 Heap.js
 =======
 
+[![Build Status](https://travis-ci.org/qiao/heap.js.svg?branch=master)](https://travis-ci.org/qiao/heap.js)
+
 A binary heap implementation in CoffeeScript/JavaScript. Ported from Python's [heapq](http://docs.python.org/library/heapq.html) module.
 
 
