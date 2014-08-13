@@ -5,7 +5,7 @@
   , "homepage"        : "https://github.com/qiao/heap.js"
   , "keywords"        : ["algorithm", "data structure", "heap"]
   , "author"          : "Xueqiao Xu <xueqiaoxu@gmail.com>"
-  , "main"            : "./index.js"
+  , "main"            : "lib/heap.js"
   , "dependencies"    : {}
   , "devDependencies" : {}
   , "repository"      : {
