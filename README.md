@@ -110,7 +110,7 @@ Push item onto heap.
 
 Pop the smallest item off the heap and return it.
 
-**peep()** (alias: **top** / **front**)
+**peek()** (alias: **top** / **front**)
 
 Return the smallest item of the heap.
 
