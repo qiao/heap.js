@@ -1,6 +1,6 @@
 {
     "name"            : "heap"
-  , "version"         : "0.2.3"
+  , "version"         : "0.2.4"
   , "description"     : "binary heap (priority queue) algorithms (ported from Python's heapq module)"
   , "homepage"        : "https://github.com/qiao/heap.js"
   , "keywords"        : ["algorithm", "data structure", "heap"]
