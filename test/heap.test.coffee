@@ -86,3 +86,15 @@ describe 'Heap#updateItem', ->
     c.x = 0
     h.updateItem(c)
     h.pop().should.eql(c)
+  it 'should return correct order when used statically', ->
+    a = x: 1
+    b = x: 2
+    c = x: 3
+    h = []
+    cmp = (m, n) -> m.x - n.x
+    Heap.push(h, a, cmp)
+    Heap.push(h, b, cmp)
+    Heap.push(h, c, cmp)
+    c.x = 0
+    Heap.updateItem(h, c, cmp)
+    Heap.pop(h, cmp).should.eql(c)

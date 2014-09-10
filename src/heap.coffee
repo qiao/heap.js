@@ -1,14 +1,14 @@
 {floor, min} = Math
 
-### 
-Default comparison function to be used 
+###
+Default comparison function to be used
 ###
 defaultCmp = (x, y) ->
   return -1 if x < y
   return 1 if x > y
   0
 
-### 
+###
 Insert item x in list a, and keep it sorted assuming a is sorted.
 
 If x is already in a, insert it to the right of the rightmost x.
@@ -50,7 +50,7 @@ heappop = (array, cmp=defaultCmp) ->
 ###
 Pop and return the current smallest value, and add the new item.
 
-This is more efficient than heappop() followed by heappush(), and can be 
+This is more efficient than heappop() followed by heappush(), and can be
 more appropriate when using a fixed size heap. Note that the value
 returned may be larger than item! That constrains reasonable use of
 this routine unless written as part of a conditional replacement:
@@ -150,6 +150,7 @@ class Heap
   @replace: heapreplace
   @pushpop: heappushpop
   @heapify: heapify
+  @updateItem: updateItem
   @nlargest: nlargest
   @nsmallest: nsmallest
 
