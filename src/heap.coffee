@@ -207,7 +207,12 @@ class Heap
 
 
 # exports to global
-if module?.exports
-  module.exports = Heap
-else
-  window.Heap = Heap
+((root, factory) ->
+  if typeof define is 'function' and define.amd
+    define [], factory
+  else if typeof exports is 'object'
+    module.exports = factory()
+  else
+    root.Heap = factory()
+) @, -> Heap
+
