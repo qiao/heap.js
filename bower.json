@@ -16,4 +16,7 @@
       "type"          :  "PSF"
     , "url"           : "http://docs.python.org/license.html"
   }]
+  , "ignore"          : [
+      "test"
+  ]
 }
