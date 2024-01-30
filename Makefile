@@ -15,7 +15,7 @@ test:
 			--require should \
 			--timeout $(TEST_TIMEOUT) \
 			--reporter $(TEST_REPORTER) \
-			--compilers coffee:coffee-script \
+			--require coffeescript/register "test/**/*.{js,coffee}" \
 			test/*.coffee
 
 
