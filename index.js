@@ -1,1 +1,1 @@
-module.exports = require('./lib/heap');
+module.exports = require('./lib/heap.cjs');
