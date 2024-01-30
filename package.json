@@ -10,6 +10,11 @@
   ],
   "author": "Xueqiao Xu <xueqiaoxu@gmail.com>",
   "main": "./index.js",
+  "module": "./lib/heap.mjs",
+  "exports": {
+    "import": "./lib/heap.mjs",
+    "require": "./lib/heap.cjs"
+  },
   "devDependencies": {
     "coffeescript": "^2.7.0",
     "mocha": "^10.2.0",
