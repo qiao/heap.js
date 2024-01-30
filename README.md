@@ -6,6 +6,13 @@ Heap.js
 A binary heap implementation in CoffeeScript/JavaScript. Ported from Python's [heapq](http://docs.python.org/library/heapq.html) module.
 
 
+Update 2024
+-----------
+
+This package now outputs a `.mjs` using `ESM` as well as `.cjs` which is identical to the legacy implementation, providing support for CommonJS, UMD, and a fallback that may work in your module manager.
+
+Most bundlers/compilers/interpeters will read `package.json` and find the file it wants.
+
 Download
 --------
 
@@ -72,7 +79,7 @@ This module exposes only one object, namely the Heap class.
 
 The constructor receives a comparison function as an optional parameter. If omitted, the heap is built as a min-heap, which means that the smallest element will be popped out first.
 
-If the comparison function is supplied, the heap will be built according to the 
+If the comparison function is supplied, the heap will be built according to the
 return value of the comparison function.
 
 * if cmp(a, b) < 0, then item a will come prior to b
@@ -84,7 +91,7 @@ So, the comparison function has the following form:
 function cmp(a, b) {
   if (a is prior to b) {
     return -1;
-  } 
+  }
   if (b is prior to a) {
     return 1;
   }
@@ -92,7 +99,7 @@ function cmp(a, b) {
 }
 ```
 
-To compare numbers, simply: 
+To compare numbers, simply:
 
 ```js
 function cmp(a, b) {
@@ -102,7 +109,7 @@ function cmp(a, b) {
 
 ### Instance Methods ###
 
-**push(item)** (alias: **insert**) 
+**push(item)** (alias: **insert**)
 
 Push item onto heap.
 
@@ -118,9 +125,9 @@ Return the smallest item of the heap.
 
 Pop and return the current smallest value, and add the new item.
 
-This is more efficient than pop() followed by push(), and can be 
+This is more efficient than pop() followed by push(), and can be
 more appropriate when using a fixed size heap. Note that the value
-returned may be larger than item! 
+returned may be larger than item!
 
 **pushpop(item)**
 
@@ -128,7 +135,7 @@ Fast version of a push followed by a pop.
 
 **heapify()**
 
-Rebuild the heap. This method may come handy when the priority of the 
+Rebuild the heap. This method may come handy when the priority of the
 internal data is being modified.
 
 **updateItem(item)**
@@ -156,7 +163,7 @@ Return a clone of the heap. (note: the internal data is a shallow copy of the or
 
 NOTE: All the static methods are designed to be applied on arrays.
 
-**push(array, item, [cmp])** 
+**push(array, item, [cmp])**
 
 Push item onto array, maintaining the heap invariant.
 
@@ -168,9 +175,9 @@ Pop the smallest item off the array, maintaining the heap invariant.
 
 Pop and return the current smallest value, and add the new item.
 
-This is more efficient than heappop() followed by heappush(), and can be 
+This is more efficient than heappop() followed by heappush(), and can be
 more appropriate when using a fixed size heap. Note that the value
-returned may be larger than item! 
+returned may be larger than item!
 
 **pushpop(array, item, [cmp])**
 

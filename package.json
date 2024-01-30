@@ -10,10 +10,15 @@
   ],
   "author": "Xueqiao Xu <xueqiaoxu@gmail.com>",
   "main": "./index.js",
+  "module": "./lib/heap.mjs",
+  "exports": {
+    "import": "./lib/heap.mjs",
+    "require": "./lib/heap.cjs"
+  },
   "devDependencies": {
-    "coffee-script": "1.3.x",
-    "mocha": "2.1.x",
-    "should": "0.6.x"
+    "coffeescript": "^2.7.0",
+    "mocha": "^10.2.0",
+    "should": "^13.2.3"
   },
   "scripts": {
     "test": "make test"
